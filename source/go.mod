@@ -1,8 +1,6 @@
 module github.com/minseoi/gorizon
 
-go 1.24.0
-
-toolchain go1.24.1
+go 1.19
 
 require github.com/labstack/echo/v4 v4.12.0
 
