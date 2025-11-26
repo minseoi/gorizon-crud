@@ -1,0 +1,33 @@
+@hostname = http://localhost
+@port = 8080
+@host = {{hostname}}:{{port}}
+
+### 모든 식재료 조회 (Get All Ingredients)
+GET {{host}}/ingredients
+
+### 식재료 추가 (Create Ingredient)
+POST {{host}}/ingredients
+Content-Type: application/json
+
+{
+  "name": "토마토"
+}
+
+### 식재료 추가 - 예제 2
+POST {{host}}/ingredients
+Content-Type: application/json
+
+{
+  "name": "감자"
+}
+
+### 식재료 이름 변경 (Update Ingredient Name)
+PUT {{host}}/ingredients/1
+Content-Type: application/json
+
+{
+  "name": "방울토마토"
+}
+
+### 식재료 제거 (Delete Ingredient)
+DELETE {{host}}/ingredients/1
