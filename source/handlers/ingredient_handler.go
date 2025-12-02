@@ -114,7 +114,7 @@ func DeleteIngredient(c echo.Context) error {
 		})
 	}
 
-	result = db.DB.Delete(&ingredient)
+	result = db.DB.Unscoped().Delete(&ingredient)
 	if result.Error != nil {
 		return c.JSON(http.StatusInternalServerError, map[string]string{
 			"error": "Failed to delete ingredient",
